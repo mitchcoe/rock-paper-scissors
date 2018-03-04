@@ -1,7 +1,6 @@
 //this file currently works, but only in console.
-//only the restart button works, DOM uonly pdates after game is over or paused
-//issue on line 18
-//will replace console.log() methods with DOM methods and a UI with working buttons
+//only the restart button works, DOM only pdates after game is over or paused
+
 
 const arr = ["rock", "paper", "scissors"];
 const screenResult = document.getElementById('result');
@@ -59,16 +58,6 @@ function defeat() {
     return screenResult.innerHTML = lose;
 }
 
-/*
-function update() {
-    const screenResult = document.getElementById('result');
-    const screenScore = document.getElementById('score'); 
-}
-*/
-//no idea where o put this or why it doesnt work
-//everthing works now except the playerChoice.toLowerCase == null issue
-//and the html not updating between prompts.
-
 function game() {
     let playerScore = 0,
         computerScore = 0;
@@ -100,5 +89,4 @@ function game() {
 
 const restart = document.getElementById('restart');
 restart.addEventListener('click', game);
-//window.addEventListener('input', update());
 game();
